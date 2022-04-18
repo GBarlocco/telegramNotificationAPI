@@ -1,0 +1,156 @@
+[
+    {
+        "id": "9c53b99.0e6e148",
+        "type": "telegram sender",
+        "z": "fb10140b.d33fe8",
+        "name": "My Bot",
+        "bot": "6d189d6e.eddec4",
+        "haserroroutput": true,
+        "outputs": 2,
+        "x": 760,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "83a33ee3.692cf",
+        "type": "function",
+        "z": "fb10140b.d33fe8",
+        "name": "Message",
+        "func": "//create the message\nlet messageTelegram  = '*Hello world!*';\n\n//configure the payload\nmsg.payload = {chatId: -0 , type: 'message', content: messageTelegram };\n\n//configure the options\nmsg.payload.options = {disable_web_previw: true, parse_mode: \"Markdown\"};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "2654b412.4d4f0c",
+                "9c53b99.0e6e148"
+            ]
+        ]
+    },
+    {
+        "id": "ad4e4c4e.a2c9f",
+        "type": "inject",
+        "z": "fb10140b.d33fe8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "83a33ee3.692cf"
+            ]
+        ]
+    },
+    {
+        "id": "2654b412.4d4f0c",
+        "type": "debug",
+        "z": "fb10140b.d33fe8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b957c064.e1a3b",
+        "type": "comment",
+        "z": "fb10140b.d33fe8",
+        "name": "information from PLC",
+        "info": "",
+        "x": 280,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1fdcd902.9fe8d7",
+        "type": "comment",
+        "z": "fb10140b.d33fe8",
+        "name": "information from Arduino",
+        "info": "",
+        "x": 290,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "79be47be.f05ce8",
+        "type": "comment",
+        "z": "fb10140b.d33fe8",
+        "name": "information from DB",
+        "info": "",
+        "x": 270,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "69236e1f.1a63a",
+        "type": "comment",
+        "z": "fb10140b.d33fe8",
+        "name": "information from Driver",
+        "info": "",
+        "x": 280,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "86e37f2d.75da3",
+        "type": "comment",
+        "z": "fb10140b.d33fe8",
+        "name": "Etc.",
+        "info": "",
+        "x": 230,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6d189d6e.eddec4",
+        "type": "telegram bot",
+        "botname": "botT",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    }
+]
