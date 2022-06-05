@@ -55,8 +55,6 @@ I will explain how to do all the configuration step by step
 | ----------------------------------------------------------------------------- |             
 | [Telegram Bot](https://flows.nodered.org/node/node-red-contrib-telegrambot)   | 
 
-
-
 ## Installers
 
 Telegram bot:
@@ -70,8 +68,12 @@ npm install node-red-contrib-telegrambot
 Run the application locally
 [http://127.0.0.1:1880/](http://127.0.0.1:1880/)
 
-
-
 ## Extra
 * [Documentation](https://nodered.org) Node-RED
 * [Documentation](https://nodejs.org/es/) Node Js
+
+---
+<p align='center'>
+&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/gastón-barlocco-315756148/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+</p>
